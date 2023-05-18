@@ -1,0 +1,345 @@
+:root {
+  --darkest: #292929;
+  --darker: #1c3f5e;
+  --medium: #8d97b9;
+  --lighter: #cbe2cd;
+  --lightest: #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 125vh;
+  background-color: var(--darkest);
+  color: var(--lightest);
+  font-family: "Montserrat", sans-serif;
+}
+
+#banner {
+  width: 100%;
+  background-image: url("./images/EKP_ATM_MM-50.jpg");
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 25px;
+}
+
+header {
+  background-color: var(--darkest);
+  color: var(--lightest);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 6px 0 var(--medium);
+  z-index: 200;
+}
+
+header img {
+  height: 225px;
+  margin-left: 10px;
+}
+
+header * {
+  display: inline;
+  z-index: auto;
+}
+
+nav {
+  color: var(--lightest);
+  justify-self: end;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a:hover {
+  color: var(--lighter);
+  transition: all 0.3s ease-in-out;
+}
+
+header li {
+  margin: 20px;
+  font-size: 140%;
+}
+
+header li a {
+  color: var(--lightest);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+.who-i-am,
+.what-i-do,
+.contact-me {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  z-index: -1;
+}
+
+.who-i-am h1 {
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  line-height: 1.5;
+  padding: 10px 40px;
+  justify-content: center;
+  /* margin: 2px 5px; */
+}
+
+.who-i-am p {
+  width: 50%;
+}
+
+#headshot img {
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  max-height: 700px;
+  align-items: end;
+  justify-content: end;
+  flex: 0 1 auto;
+  margin-top: 150px;
+  margin-right: 20px;
+}
+
+.ws::after {
+  content: "\a \a";
+  white-space: pre;
+}
+
+.ws::before {
+  content: "\a";
+  white-space: pre;
+}
+
+aside {
+  display: flex;
+  border-right: 3px solid var(--medium);
+  width: 25%;
+  align-items: center;
+  justify-content: right;
+  padding-right: 25px;
+}
+
+.gallery {
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2;
+  column-gap: 20px;
+  row-gap: 40px;
+  padding-left: 40px;
+}
+
+.gallery img {
+  max-width: 700px;
+  flex: 1 1 auto;
+}
+
+.img-grid {
+  position: relative;
+}
+
+.img-grid:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to bottom, #1c3f5e22 0%, #8d97b999 100%);
+}
+
+.img-grid:hover:before {
+  height: 100%;
+  content: "Coming Soon";
+  font-size: 80px;
+  color: var(--darkest);
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 4px#f2f2f244, 0 0 15px #8d97b9;
+}
+
+.contact-me {
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 115px;
+}
+
+.contact-me h3 {
+  justify-content: start;
+  font-size: 175%;
+}
+
+.contact-me a {
+  color: var(--lightest);
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 40px;
+}
+
+.contact-me a:hover {
+  color: var(--lighter);
+  border-radius: 8px;
+  font-weight: bolder;
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0px 0px 4px var(--medium), 0px 0px 15px var(--darker);
+}
+
+footer {
+  background-color: var(--darkest);
+  color: var(--lightest);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 6px 0 var(--medium);
+  padding: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 125%;
+}
+
+footer li a {
+  text-decoration: none;
+  color: var(--lightest);
+}
+
+footer li {
+  margin: 15px;
+}
+
+footer a:hover {
+  color: var(--lighter);
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+footer img {
+  height: 85px;
+}
+
+@media screen and (max-width: 992px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    row-gap: 40px;
+    padding-left: 40px;
+  }
+
+  .gallery img {
+    max-width: 450px;
+  }
+
+  .img-grid:before {
+    width: 80%;
+  }
+
+  .img-grid:hover:before {
+    content: "Coming Soon";
+    font-size: 60px;
+  }
+
+  #banner {
+    display: none;
+  }
+
+  .who-i-am {
+    margin-top: 150px;
+  }
+
+  .who-i-am p {
+    width: 75%;
+  }
+
+  header * {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header li {
+    font-size: 100%;
+  }
+
+  header img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 200%;
+  }
+
+  #headshot {
+    display: none;
+  }
+
+  footer ul {
+    font-size: 100%;
+  }
+
+  footer img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* aside {
+    display: none;
+  } */
+  .who-i-am p {
+    width: 100%;
+  }
+
+  p {
+    font-size: 23px;
+  }
+
+  .gallery img {
+    max-width: 600px;
+  }
+
+  .img-grid:before {
+    width: 100%;
+  }
+
+  .img-grid:hover:before {
+    content: "Coming Soon";
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  aside {
+    display: none;
+  }
+}
