@@ -2,13 +2,13 @@
 
 This repo contains corynko's (Ethan Kotel's) current developer's portfolio.
 
-## What It Is
+## What Is It
 
 A clean, functional portfolio that communicates what it needs to. A was searching for a calm and clean aesthetic that still contains all of the necessary functionality, with a dark, earthy color palette and subtle animations.
 
 ## Where Is It
 
-You can view my current portfolio at [corynko.github.io/current-portfolio](https://corynko.github.io/current-portfolio).
+You can view my current portfolio at [corynko.github.io/current-portfolio](https://corynko.github.io/Current-Portfolio).
 
 ## Who Can Use It
 
