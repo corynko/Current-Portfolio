@@ -180,6 +180,31 @@ aside {
   text-shadow: 0 0 4px#f2f2f244, 0 0 15px #8d97b9;
 }
 
+.fanPlan {
+  position: relative;
+}
+
+.fanPlan:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to bottom, #1c3f5e22 0%, #8d97b999 100%);
+}
+
+.fanPlan:hover:before {
+  height: 100%;
+  content: "NHL Fan Plan";
+  font-size: 80px;
+  color: var(--darkest);
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 4px#f2f2f244, 0 0 15px #8d97b9;
+}
+
 .contact-me {
   align-items: center;
   height: 100%;
